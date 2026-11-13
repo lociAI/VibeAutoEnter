@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <AssemblyName>VibeAutoEnter</AssemblyName>
+    <RootNamespace>VibeAutoEnter</RootNamespace>
+    <Version>1.2.0</Version>
+    <Authors>LociaX Software</Authors>
+    <Description>Hands-free prompt automation for AI CLI tools and IDEs on Windows</Description>
+  </PropertyGroup>
+</Project>

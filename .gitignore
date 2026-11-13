@@ -1,0 +1,7 @@
+build/
+dist/
+*.dmg
+*.sha256
+VibeAutoEnter.Windows/bin/
+VibeAutoEnter.Windows/obj/
+.DS_Store
