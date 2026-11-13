@@ -5,6 +5,9 @@ on:
     branches: [ main, master ]
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   build-windows:
     runs-on: windows-latest
@@ -32,3 +35,10 @@ jobs:
         with:
           name: VibeAutoEnter-Windows-x64
           path: release-windows/VibeAutoEnter.exe
+
+      - name: Publish GitHub Release with VibeAutoEnter.exe
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v1.2.0
+          name: VibeAutoEnter v1.2.0 (Windows)
+          files: release-windows/VibeAutoEnter.exe
