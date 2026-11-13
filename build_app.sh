@@ -43,6 +43,11 @@ sed -i '' "s/\$(PRODUCT_BUNDLE_PACKAGE_TYPE)/APPL/g" "$APP_BUNDLE/Contents/Info.
 sed -i '' "s/\$(PRODUCT_BUNDLE_IDENTIFIER)/com.vibetools.VibeAutoEnter/g" "$APP_BUNDLE/Contents/Info.plist"
 sed -i '' "s/\$(MACOSX_DEPLOYMENT_TARGET)/14.0/g" "$APP_BUNDLE/Contents/Info.plist"
 
+if [ -f "$SRC_DIR/AppIcon.icns" ]; then
+    echo "Copying AppIcon.icns to Resources..."
+    cp "$SRC_DIR/AppIcon.icns" "$APP_BUNDLE/Contents/Resources/"
+fi
+
 echo "Signing application bundle..."
 codesign --force --deep --sign - --entitlements "$SRC_DIR/VibeAutoEnter.entitlements" "$APP_BUNDLE"
 
